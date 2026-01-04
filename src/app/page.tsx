@@ -100,7 +100,7 @@ export default function Home() {
               View My Work <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
 
-            <a href="/cv-ikhwan.pdf" download>
+            <a href="/my-cv2026.pdf" download="my-cv2026.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="border-slate-700 text-slate-300 hover:border-white hover:text-white bg-slate-950/30 backdrop-blur-sm">
                 Download CV <Download className="ml-2 h-4 w-4" />
               </Button>
