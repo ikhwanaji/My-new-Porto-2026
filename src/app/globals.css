@@ -62,3 +62,24 @@ body {
     transform: translate(0px, 0px) scale(1);
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* 2. Jalur (Track) background di belakang scrollbar */
+::-webkit-scrollbar-track {
+  background: #020617; /* Slate-950 (Menyatu dengan warna background utama) */
+}
+
+/* 3. Batang (Thumb) yang digeser */
+::-webkit-scrollbar-thumb {
+  background: #334155; /* Slate-700 (Abu-abu gelap elegan) */
+  border-radius: 5px; /* Membuat ujungnya bulat */
+  border: 2px solid #020617; /* Trik membuat 'padding' agar batang tidak menempel pinggir */
+}
+
+/* 4. Efek saat mouse diarahkan ke scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* Slate-600 (Sedikit lebih terang saat di-hover) */
+}

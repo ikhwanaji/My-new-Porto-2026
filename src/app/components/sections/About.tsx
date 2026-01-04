@@ -33,7 +33,7 @@ export function About() {
               <div>
                 <h3 className="font-bold text-white mb-1">Information Technology</h3>
                 <p className="text-sm text-secondary">Universitas Bina Sarana Informatika (2021 - 2025)</p>
-                <p className="text-xs text-slate-500 mt-1">Focus: Software Engineering</p>
+                <p className="text-xs text-slate-500 mt-1">Focus: Web developer</p>
               </div>
             </div>
           </div>

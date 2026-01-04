@@ -88,7 +88,8 @@ export function Projects() {
           </div>
           <div className="flex flex-col h-full justify-end relative z-10">
             <div className="mb-auto">
-              <Badge color="red">React</Badge>
+              <Badge color="red">Next.js</Badge>
+              
             </div>
             <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors">Movie Deck</h3>
             <p className="text-sm text-slate-400 mb-4">Aplikasi pencarian film interaktif dengan database TMDB, menampilkan rating dan trailer.</p>
