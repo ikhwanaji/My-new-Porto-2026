@@ -67,12 +67,12 @@ body {
   width: 10px;
 }
 
-/* 2. Jalur (Track) background di belakang scrollbar */
+
 ::-webkit-scrollbar-track {
-  background: #020617; /* Slate-950 (Menyatu dengan warna background utama) */
+  background: #020617; 
 }
 
-/* 3. Batang (Thumb) yang digeser */
+
 ::-webkit-scrollbar-thumb {
   background: #334155; /* Slate-700 (Abu-abu gelap elegan) */
   border-radius: 5px; /* Membuat ujungnya bulat */
