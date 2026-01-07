@@ -1,4 +1,4 @@
-// src/app/page.tsx
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -31,7 +31,7 @@ type TechItem = {
 
 // --- DATA TECH STACK ---
 const techStack: TechItem[] = [
-  { name: 'Next.js 14', icon: SiNextdotjs, color: 'text-white' },
+  { name: 'Next.js', icon: SiNextdotjs, color: 'text-white' },
   { name: 'React', icon: SiReact, color: 'text-blue-400' },
   { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
@@ -57,15 +57,7 @@ export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col overflow-hidden selection:bg-primary/20 bg-background">
       <Navbar />
-
-      {/* --- HERO SECTION (BUG FIX & TYPOGRAPHY FIX) --- */}
-      {/* BUG FIX 1: Added 'overflow-hidden'. Ini penting! 
-          Agar elemen background yang besar (w-[200vw]) tidak bocor/menutupi section bawah saat scroll.
-      */}
       <section id="home" className="relative z-10 min-h-screen flex flex-col justify-center items-center pt-24 pb-20 px-6 overflow-hidden">
-        {/* ========================================================= */}
-        {/* BACKGROUND ELEMENTS (Moved INSIDE Section to fix scroll bug) */}
-        {/* ========================================================= */}
 
         {/* 1. Grid Pattern */}
         <div className="absolute inset-0 bg-grid-small-white/[0.2] -z-20" />
@@ -97,13 +89,9 @@ export default function Home() {
             </span>
           </motion.div>
 
-          {/* Headline (TYPOGRAPHY FIX) */}
-          {/* FIX: Ukuran font dikurangi dari 'lg:text-9xl' menjadi 'lg:text-7xl'.
-              'text-9xl' terlalu besar untuk layar laptop standar sehingga pecah barisnya jelek.
-          */}
           <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-sm">
-            Building digital experiences with <br className="hidden md:block" />
-            <span className="text-white">code & creativity.</span>
+            Building digital experiences  <br className="hidden md:block" />
+            <span className="text-white">with code & creativity.</span>
           </motion.h1>
 
           {/* Subheadline */}
