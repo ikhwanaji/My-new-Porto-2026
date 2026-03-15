@@ -1,4 +1,3 @@
-
 'use client';
 
 import { motion } from 'framer-motion';
@@ -36,7 +35,6 @@ const techStack: TechItem[] = [
   { name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400' },
   { name: 'Vite', imageSrc: '/vite.svg', color: undefined },
-  { name: 'Flutter', icon: SiFlutter, color: 'text-blue-300' },
 ];
 
 // Animasi Variants
@@ -58,7 +56,6 @@ export default function Home() {
     <main className="relative flex min-h-screen flex-col overflow-hidden selection:bg-primary/20 bg-background">
       <Navbar />
       <section id="home" className="relative z-10 min-h-screen flex flex-col justify-center items-center pt-24 pb-20 px-6 overflow-hidden">
-
         {/* 1. Grid Pattern */}
         <div className="absolute inset-0 bg-grid-small-white/[0.2] -z-20" />
 
@@ -90,8 +87,8 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-sm">
-            Building digital experiences  <br className="hidden md:block" />
-            <span className="text-white">with code & creativity.</span>
+            Developing robust web applications <br className="hidden md:block" />
+            <span className="text-white">from frontend to backend.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -112,7 +109,7 @@ export default function Home() {
             </MagneticWrapper>
 
             <MagneticWrapper>
-              <a href="/cv-ikhwan.pdf" download>
+              <a href="/cv-ikhwan-aji.pdf" download>
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base md:text-lg border-slate-600 text-slate-200 hover:border-white hover:text-white bg-slate-950/40 backdrop-blur-md">
                   Download CV <Download className="ml-2 h-4 w-4" />
                 </Button>

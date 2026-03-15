@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, ArrowUpRight, Globe, Image as ImageIcon, Clapperboard, Gamepad2, TrendingUp } from 'lucide-react';
+import { Github, ArrowUpRight, Globe, Clapperboard, Gamepad2, TrendingUp, Package, Store } from 'lucide-react';
 import { Card } from '@/app/components/ui/Card';
 import { Section } from '@/app/components/ui/Section';
 import Button from '@/app/components/ui/Button';
@@ -17,13 +17,11 @@ export function Projects() {
   return (
     <Section id="projects" className="relative z-10">
       {/* --- HEADER SECTION --- */}
-      {/* Mobile: Stack ke bawah (flex-col), items-start. Desktop: Sejajar (flex-row), items-end. */}
       <div className="mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-0">
         <div className="space-y-3 md:space-y-2">
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter text-white">Featured Projects</h2>
-          <p className="text-slate-400 max-w-md text-base md:text-lg leading-relaxed">A showcase of my recent work, deployed and ready to use.</p>
+          <p className="text-slate-400 max-w-md text-base md:text-lg leading-relaxed">A showcase of my recent end-to-end web development work.</p>
         </div>
-        {/* Tombol Github: Full width di mobile agar mudah ditekan */}
         <div className="w-full md:w-auto">
           <Button variant="outline" className="w-full md:w-auto justify-center" onClick={() => window.open('https://github.com/ikhwanaji', '_blank')}>
             View Github Profile <Github className="ml-2 h-4 w-4" />
@@ -32,58 +30,86 @@ export function Projects() {
       </div>
 
       {/* --- BENTO GRID LAYOUT --- */}
-      {/* STRATEGI RESPONSIVE:
-         - Mobile (<768px): 1 Kolom
-         - Tablet (768px - 1024px): 2 Kolom (Agar tidak gepeng)
-         - Desktop (>1024px): 3 Kolom (Layout Bento Asli)
-      */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-50px' }} // Margin dikurangi agar animasi jalan lebih cepat di HP
-        variants={fadeInUp}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[350px]"
-      >
-        {/* 1. PROJECT UTAMA: DOKER (SeaSpark) */}
-        {/* Tablet & Desktop: Ambil 2 Kolom lebar */}
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-50px' }} variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[350px]">
+        {/* 1. PROJECT UTAMA: LOGISTIK SIAGA (FULLSTACK SHOWCASE) */}
         <Card className="md:col-span-2 row-span-1 relative overflow-hidden group flex flex-col justify-end p-0 border-white/10 min-h-100 md:min-h-0">
-          {/* Background Gradient */}
-          <div className="absolute inset-0 bg-linear-to-br from-indigo-900/40 via-slate-900 to-slate-950 z-0" />
+          <div className="absolute inset-0 bg-linear-to-br from-red-900/40 via-slate-900 to-slate-950 z-0" />
 
-          {/* Decorative Icon: Diperkecil di Mobile (size 180) agar tidak menutupi teks */}
           <div className="absolute -top-10 -right-10 text-white/5 group-hover:text-white/10 transition-colors duration-500">
-            <Globe className="w-45 h-45 md:w-62.5 md:h-62.5" />
+            <Package className="w-45 h-45 md:w-62.5 md:h-62.5" />
           </div>
 
           <div className="relative z-10 p-6 md:p-10 flex flex-col h-full justify-between bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent">
             <div className="space-y-4 pt-12 md:pt-0">
-              {' '}
               <div className="flex flex-wrap gap-2">
-                <Badge color="indigo">Kampus Merdeka</Badge>
-                <Badge color="blue">React</Badge>
-                <Badge color="blue">Vite</Badge>
-                <Badge color="cyan">Tailwind</Badge>
+                <Badge color="red">Next.js 16</Badge>
+                <Badge color="orange">Firebase</Badge>
+                <Badge color="emerald">Gemini AI</Badge>
+                <Badge color="cyan">Tailwind v4</Badge>
               </div>
-              <h3 className="font-display text-3xl md:text-4xl font-bold text-white group-hover:text-indigo-300 transition-colors">Doker.com</h3>
-              <p className="text-slate-300 max-w-xl leading-relaxed text-sm md:text-base">Platform ensiklopedia penyakit ikan kerapu & e-commerce terintegrasi. Proyek Studi Independen (Infinite Learning).</p>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-white group-hover:text-red-300 transition-colors">Logistik Siaga</h3>
+              <p className="text-slate-300 max-w-xl leading-relaxed text-sm md:text-base">
+                Platform Command Center logistik bencana. Dilengkapi validasi foto otomatis dengan Computer Vision, geolokasi real-time, dan sistem inventory locking untuk mencegah perebutan stok.
+              </p>
             </div>
 
             <div className="pt-6 flex flex-wrap gap-3 md:gap-4">
-              <ProjectLink href="https://doker-zeta.vercel.app/" label="Live Demo" icon={ArrowUpRight} primary />
-              <ProjectLink href="https://github.com/ikhwanaji/SeaSpark-Massive-Project" label="Repo" icon={Github} />
+              <ProjectLink href="https://logistik-siaga.vercel.app/" label="Live Demo" icon={ArrowUpRight} primary />
+              <ProjectLink href="https://github.com/ikhwanaji/logistik-siaga" label="Repo" icon={Github} />
             </div>
           </div>
         </Card>
 
-        {/* 2. STOCK LENS AI */}
+        {/* 2. DOKER (SeaSpark) */}
         <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
-          <div className="absolute top-4 right-4 text-emerald-500/20 group-hover:text-emerald-500 transition-colors duration-300">
-            <TrendingUp size={40} className="md:w-12 md:h-12" />
+          <div className="absolute top-4 right-4 text-indigo-500/20 group-hover:text-indigo-500 transition-colors duration-300">
+            <Globe size={40} className="md:w-12 md:h-12" />
           </div>
 
           <div className="flex flex-col h-full justify-end relative z-10">
             <div className="mb-auto mt-8 md:mt-0 ">
-              <div className="mt-2  flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap gap-2">
+                <Badge color="indigo">Kampus Merdeka</Badge>
+                <Badge color="blue">React</Badge>
+              </div>
+            </div>
+            <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Doker.com</h3>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Platform ensiklopedia penyakit ikan kerapu & e-commerce terintegrasi. Proyek Studi Independen.</p>
+            <div className="flex gap-3 mt-2">
+              <ProjectLink href="https://doker-zeta.vercel.app/" label="Visit" icon={ArrowUpRight} />
+              <ProjectLink href="https://github.com/ikhwanaji/SeaSpark-Massive-Project" label="Code" icon={Github} />
+            </div>
+          </div>
+        </Card>
+
+        {/* 3. WEB UMKM SOSIS SOLO */}
+        <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
+          <div className="absolute top-4 right-4 text-orange-500/20 group-hover:text-orange-500 transition-colors duration-300">
+            <Store size={40} className="md:w-12 md:h-12" />
+          </div>
+          <div className="flex flex-col h-full justify-end relative z-10">
+            <div className="mb-auto mt-8 md:mt-0 flex flex-wrap gap-2">
+              <Badge color="red">Next.js</Badge>
+              <Badge color="cyan">Tailwind</Badge>
+              <Badge color="orange">UMKM</Badge>
+            </div>
+            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">Katalog Sosis Solo</h3>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Website etalase digital yang dibangun untuk mendukung digitalisasi bisnis kuliner UMKM keluarga.</p>
+            <div className="flex gap-3">
+              <ProjectLink href="https://web-sosis-solo.vercel.app/" label="Visit" icon={ArrowUpRight} />
+              <ProjectLink href="https://github.com/ikhwanaji/Web-Sosis-Solo" label="Code" icon={Github} />
+            </div>
+          </div>
+        </Card>
+
+        {/* 4. STOCK LENS AI */}
+        <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
+          <div className="absolute top-4 right-4 text-emerald-500/20 group-hover:text-emerald-500 transition-colors duration-300">
+            <TrendingUp size={40} className="md:w-12 md:h-12" />
+          </div>
+          <div className="flex flex-col h-full justify-end relative z-10">
+            <div className="mb-auto mt-8 md:mt-0 ">
+              <div className="mt-2 flex flex-wrap gap-2">
                 <Badge color="emerald">AI Gen</Badge>
                 <Badge color="emerald">Microstock</Badge>
               </div>
@@ -97,17 +123,17 @@ export function Projects() {
           </div>
         </Card>
 
-        {/* 3. MOVIE DECK */}
+        {/* 5. MOVIE DECK */}
         <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
-          <div className="absolute top-4 right-4 text-red-500/20 group-hover:text-red-500 transition-colors duration-300">
+          <div className="absolute top-4 right-4 text-rose-500/20 group-hover:text-rose-500 transition-colors duration-300">
             <Clapperboard size={40} className="md:w-12 md:h-12" />
           </div>
           <div className="flex flex-col h-full justify-end relative z-10">
             <div className="mb-auto mt-8 md:mt-0 flex flex-wrap gap-2">
               <Badge color="red">Next.js</Badge>
-              <Badge color="red">TMDB API</Badge>
+              <Badge color="rose">TMDB API</Badge>
             </div>
-            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors">Movie Deck</h3>
+            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-rose-300 transition-colors">Movie Deck</h3>
             <p className="text-sm text-slate-400 mb-4 line-clamp-3">Aplikasi pencarian film interaktif dengan database TMDB, rating, dan trailer.</p>
             <div className="flex gap-3">
               <ProjectLink href="https://movie-deck-eight.vercel.app/" label="Visit" icon={ArrowUpRight} />
@@ -116,7 +142,7 @@ export function Projects() {
           </div>
         </Card>
 
-        {/* 4. GAME VAULT */}
+        {/* 6. GAME VAULT */}
         <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
           <div className="absolute top-4 right-4 text-purple-500/20 group-hover:text-purple-500 transition-colors duration-300">
             <Gamepad2 size={40} className="md:w-12 md:h-12" />
@@ -134,24 +160,6 @@ export function Projects() {
             </div>
           </div>
         </Card>
-
-        {/* 5. IMAGE CONVERTER PRO */}
-        <Card className="relative overflow-hidden group p-6 border-white/10 bg-slate-900/40 min-h-75 md:min-h-0">
-          <div className="absolute top-4 right-4 text-orange-500/20 group-hover:text-orange-500 transition-colors duration-300">
-            <ImageIcon size={40} className="md:w-12 md:h-12" />
-          </div>
-          <div className="flex flex-col h-full justify-end relative z-10">
-            <div className="mb-auto mt-8 md:mt-0">
-              <Badge color="orange">Utility</Badge>
-            </div>
-            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">Image Converter Pro</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Tool konversi gambar instan (JPG, PNG, WEBP) berbasis browser yang ringan.</p>
-            <div className="flex gap-3">
-              <ProjectLink href="https://image-converter-pro.vercel.app/" label="Visit" icon={ArrowUpRight} />
-              <ProjectLink href="https://github.com/ikhwanaji/Image-Converter-Pro" label="Code" icon={Github} />
-            </div>
-          </div>
-        </Card>
       </motion.div>
     </Section>
   );
@@ -164,6 +172,7 @@ function Badge({ children, color = 'indigo' }: { children: React.ReactNode; colo
     cyan: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20',
     emerald: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20',
     red: 'bg-red-500/10 text-red-300 border-red-500/20',
+    rose: 'bg-rose-500/10 text-rose-300 border-rose-500/20',
     purple: 'bg-purple-500/10 text-purple-300 border-purple-500/20',
     orange: 'bg-orange-500/10 text-orange-300 border-orange-500/20',
   };
