@@ -1,4 +1,4 @@
-// components/sections/Projects.tsx
+
 'use client';
 
 import { motion } from 'framer-motion';
@@ -7,7 +7,6 @@ import { Card } from '@/app/components/ui/Card';
 import { Section } from '@/app/components/ui/Section';
 import Button from '@/app/components/ui/Button';
 
-// Animasi Masuk
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -29,9 +28,7 @@ export function Projects() {
         </div>
       </div>
 
-      {/* --- BENTO GRID LAYOUT --- */}
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-50px' }} variants={fadeInUp} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-auto md:auto-rows-[350px]">
-        {/* 1. PROJECT UTAMA: LOGISTIK SIAGA (FULLSTACK SHOWCASE) */}
         <Card className="md:col-span-2 row-span-1 relative overflow-hidden group flex flex-col justify-end p-0 border-white/10 min-h-100 md:min-h-0">
           <div className="absolute inset-0 bg-linear-to-br from-red-900/40 via-slate-900 to-slate-950 z-0" />
 
@@ -42,14 +39,14 @@ export function Projects() {
           <div className="relative z-10 p-6 md:p-10 flex flex-col h-full justify-between bg-linear-to-t from-slate-950/90 via-slate-950/40 to-transparent">
             <div className="space-y-4 pt-12 md:pt-0">
               <div className="flex flex-wrap gap-2">
-                <Badge color="red">Next.js 16</Badge>
+                <Badge color="red">Next.js</Badge>
                 <Badge color="orange">Firebase</Badge>
                 <Badge color="emerald">Gemini AI</Badge>
-                <Badge color="cyan">Tailwind v4</Badge>
+                <Badge color="cyan">Tailwind</Badge>
               </div>
               <h3 className="font-display text-3xl md:text-4xl font-bold text-white group-hover:text-red-300 transition-colors">Logistik Siaga</h3>
               <p className="text-slate-300 max-w-xl leading-relaxed text-sm md:text-base">
-                Platform Command Center logistik bencana. Dilengkapi validasi foto otomatis dengan Computer Vision, geolokasi real-time, dan sistem inventory locking untuk mencegah perebutan stok.
+                A disaster relief logistics command center. Features AI-powered image validation, real-time geolocation, and an inventory locking system to prevent double-claiming of items.
               </p>
             </div>
 
@@ -71,10 +68,12 @@ export function Projects() {
               <div className="mt-2 flex flex-wrap gap-2">
                 <Badge color="indigo">Kampus Merdeka</Badge>
                 <Badge color="blue">React</Badge>
+                <Badge color="blue">ExpressJs</Badge>
+                <Badge color="blue">Mysql</Badge>
               </div>
             </div>
             <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">Doker.com</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Platform ensiklopedia penyakit ikan kerapu & e-commerce terintegrasi. Proyek Studi Independen.</p>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">An integrated e-commerce and encyclopedia platform for grouper fish health. Developed as an Independent Study capstone project.</p>
             <div className="flex gap-3 mt-2">
               <ProjectLink href="https://doker-zeta.vercel.app/" label="Visit" icon={ArrowUpRight} />
               <ProjectLink href="https://github.com/ikhwanaji/SeaSpark-Massive-Project" label="Code" icon={Github} />
@@ -93,8 +92,8 @@ export function Projects() {
               <Badge color="cyan">Tailwind</Badge>
               <Badge color="orange">UMKM</Badge>
             </div>
-            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">Katalog Sosis Solo</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Website etalase digital yang dibangun untuk mendukung digitalisasi bisnis kuliner UMKM keluarga.</p>
+            <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-orange-300 transition-colors">Website UMKM Sosis Solo</h3>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">A responsive digital storefront built to support and digitalize a family-owned culinary micro-business (MSME).</p>
             <div className="flex gap-3">
               <ProjectLink href="https://web-sosis-solo.vercel.app/" label="Visit" icon={ArrowUpRight} />
               <ProjectLink href="https://github.com/ikhwanaji/Web-Sosis-Solo" label="Code" icon={Github} />
@@ -115,7 +114,7 @@ export function Projects() {
               </div>
             </div>
             <h3 className="font-display text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">Stock Lens AI</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Asisten cerdas untuk kontributor Microstock: Generator prompt AI & fitur Image-to-Prompt.</p>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">A smart assistant for microstock contributors featuring an AI prompt generator and image-to-prompt capabilities.</p>
             <div className="flex gap-3 mt-2">
               <ProjectLink href="https://stock-lens-ai-gen.vercel.app/" label="Visit" icon={ArrowUpRight} />
               <ProjectLink href="https://github.com/ikhwanaji/StockLens-AI-Gen" label="Code" icon={Github} />
@@ -134,7 +133,7 @@ export function Projects() {
               <Badge color="rose">TMDB API</Badge>
             </div>
             <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-rose-300 transition-colors">Movie Deck</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Aplikasi pencarian film interaktif dengan database TMDB, rating, dan trailer.</p>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">A modern movie discovery application utilizing the TMDB API to explore ratings, details, and trailers.</p>
             <div className="flex gap-3">
               <ProjectLink href="https://movie-deck-eight.vercel.app/" label="Visit" icon={ArrowUpRight} />
               <ProjectLink href="https://github.com/ikhwanaji/movie-deck" label="Code" icon={Github} />
@@ -153,7 +152,7 @@ export function Projects() {
               <Badge color="purple">RAWG API</Badge>
             </div>
             <h3 className="font-display text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">Game Vault</h3>
-            <p className="text-sm text-slate-400 mb-4 line-clamp-3">Katalog video game lengkap dengan pencarian, filter genre, dan detail platform.</p>
+            <p className="text-sm text-slate-400 mb-4 line-clamp-3">A comprehensive video game catalog featuring advanced search capabilities, genre filtering, and platform specifications.</p>
             <div className="flex gap-3">
               <ProjectLink href="https://game-vault-azure.vercel.app/" label="Visit" icon={ArrowUpRight} />
               <ProjectLink href="https://github.com/ikhwanaji/game-vault" label="Code" icon={Github} />

@@ -15,10 +15,10 @@ export function About() {
             <span className="text-primary">writing code.</span>
           </h2>
           <p className="text-secondary text-lg leading-relaxed">
-            Saya percaya bahwa pengembangan frontend bukan hanya tentang membuat tampilan yang cantik, tetapi tentang menciptakan pengalaman pengguna yang mulus dan performa yang efisien.
+            For me, web development isn't just about making things look good on a screen. It's about building applications that are actually fast, easy to use, and reliable.
           </p>
           <p className="text-secondary text-lg leading-relaxed">
-            Saat ini saya adalah mahasiswa tingkat akhir di <strong>Universitas Bina Sarana Informatika</strong>, bersiap lulus pada Desember 2025.
+            As a recent Information Technology graduate from Universitas Bina Sarana Informatika, I enjoy bridging the gap between design and engineering, constantly learning to build scalable and accessible digital products.
           </p>
         </div>
 
@@ -31,9 +31,9 @@ export function About() {
                 <GraduationCap size={24} />
               </div>
               <div>
-                <h3 className="font-bold text-white mb-1">Information Technology</h3>
+                <h3 className="font-bold text-white mb-1">Information Technology (B.Sc.)</h3>
                 <p className="text-sm text-secondary">Universitas Bina Sarana Informatika (2021 - 2025)</p>
-                <p className="text-xs text-slate-500 mt-1">Focus: Web developer</p>
+                <p className="text-xs text-slate-500 mt-1">Graduated in Aug 2025 with a GPA of 3.47. Focused on Web Development and Software Engineering.</p>
               </div>
             </div>
           </div>
@@ -47,7 +47,7 @@ export function About() {
               <div>
                 <h3 className="font-bold text-white mb-1">Studi Independen (Kampus Merdeka)</h3>
                 <p className="text-sm text-secondary">Infinite Learning - Web Development & UI/UX</p>
-                <p className="text-xs text-slate-500 mt-1">Best Capstone Project Team</p>
+                <p className="text-xs text-slate-500 mt-1">Intensive training in Web Development & UI/UX Design. Collaborated as a Developer to build Doker.com.</p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@ export function About() {
               </div>
               <div>
                 <h3 className="font-bold text-white mb-1">Technical Focus</h3>
-                <p className="text-sm text-secondary">Membangun aplikasi web modern dengan React Ecosystem, mengutamakan Clean Code dan Pixel Perfect design.</p>
+                <p className="text-sm text-secondary">Specializing in the React ecosystem (Next.js) and modern UI frameworks, with a strong emphasis on clean code and pixel-perfect design.</p>
               </div>
             </div>
           </div>

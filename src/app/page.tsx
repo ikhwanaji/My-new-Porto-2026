@@ -16,8 +16,8 @@ import { cn } from '@/lib/utils';
 import { Projects } from '@/app/components/sections/Projects';
 import { About } from '@/app/components/sections/About';
 import { Contact } from '@/app/components/sections/Contact';
-
-import Hero3D from '@/app/components/ui/Hero3D';
+import dynamic from 'next/dynamic';
+// import Hero3D from '@/app/components/ui/Hero3D';
 import MagneticWrapper from '@/app/components/ui/MagneticWrapper';
 
 // --- TYPE DEFINITIONS ---
@@ -50,6 +50,10 @@ const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
+
+const Hero3D = dynamic(() => import('@/app/components/ui/Hero3D'), { 
+  ssr: false, // Ini kunci utamanya, mematikan SSR untuk komponen 3D
+});
 
 export default function Home() {
   return (
@@ -87,13 +91,13 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-6xl font-bold tracking-tight bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-transparent drop-shadow-sm">
-            Developing robust web applications <br className="hidden md:block" />
-            <span className="text-white">from frontend to backend.</span>
+            Building fast, responsive,  <br className="hidden md:block" />
+            <span className="text-white">and user-friendly web applications.</span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p variants={itemVariants} className="text-base md:text-xl text-slate-300 max-w-2xl leading-relaxed drop-shadow-md px-4">
-            Hi, I&apos;m <strong className="text-white">Ikhwan Aji Pratama</strong>. A Fresh Graduate Information Technology student & Frontend Developer based in Indonesia.
+            Hi, I&apos;m <strong className="text-white">Ikhwan Aji Pratama</strong>. A recently graduated IT student based in Indonesia. I enjoy bringing good designs to life through fast and interactive web experiences.
           </motion.p>
 
           {/* CTA Buttons */}

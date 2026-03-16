@@ -1,4 +1,3 @@
-// src/app/components/SmoothScroll.tsx
 'use client';
 
 import { ReactLenis } from 'lenis/react';
