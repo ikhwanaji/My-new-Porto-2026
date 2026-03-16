@@ -1,4 +1,3 @@
-// components/sections/Contact.tsx
 'use client';
 
 import { Section } from '@/app/components/ui/Section';

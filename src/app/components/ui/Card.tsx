@@ -1,4 +1,3 @@
-// components/ui/Card.tsx
 'use client';
 import { cn } from '@/lib/utils';
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion';
@@ -12,7 +11,7 @@ export function Card({ className, children, ...props }: CardProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Spring physics untuk rotasi yang smooth
+
   const x = useSpring(0, { stiffness: 150, damping: 15 });
   const y = useSpring(0, { stiffness: 150, damping: 15 });
 
@@ -27,7 +26,7 @@ export function Card({ className, children, ...props }: CardProps) {
     const xPct = (clientX - left) / width - 0.5;
     const yPct = (clientY - top) / height - 0.5;
 
-    // Mengubah nilai rotasi (maksimal 10 derajat)
+    
     x.set(yPct * 10);
     y.set(xPct * -10);
   }

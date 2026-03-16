@@ -1,4 +1,3 @@
-// components/ui/MagneticWrapper.tsx
 'use client';
 
 import { useRef, useState } from 'react';

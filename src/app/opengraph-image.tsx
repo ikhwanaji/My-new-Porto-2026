@@ -1,11 +1,9 @@
-// app/opengraph-image.tsx
+
 import { ImageResponse } from 'next/og';
 
-// Route segment config
 export const runtime = 'edge';
 
-// Image metadata
-export const alt = 'Ikhwan Aji Pratama - Frontend Developer Portfolio';
+export const alt = 'Ikhwan Aji Pratama - Web Developer Portfolio';
 export const size = {
   width: 1200,
   height: 630,
@@ -13,11 +11,9 @@ export const size = {
 
 export const contentType = 'image/png';
 
-// Image generation
 export default async function Image() {
   return new ImageResponse(
     (
-      // ImageResponse JSX element
       <div
         style={{
           background: 'linear-gradient(to bottom right, #020617, #1e1b4b)',
@@ -32,7 +28,6 @@ export default async function Image() {
           position: 'relative',
         }}
       >
-        {/* Background Pattern Grid */}
         <div
           style={{
             position: 'absolute',
@@ -86,7 +81,7 @@ export default async function Image() {
               fontWeight: 600,
             }}
           >
-            Frontend Developer
+            Web Developer
           </div>
         </div>
       </div>

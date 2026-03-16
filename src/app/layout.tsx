@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
@@ -11,8 +10,8 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Ikhwan Aji Pratama | Fullstack Web Developer',
-  description: 'Portfolio of Ikhwan Aji Pratama, a Fullstack Web Developer focused on building scalable web applications, optimizing performance, and solving complex problems.',
+  title: 'Ikhwan Aji Pratama | Web Developer',
+  description: 'Web Developer portfolio of Ikhwan Aji Pratama. I build fast, responsive, and practical web applications using modern technologies like Next.js and Tailwind CSS.',
 };
 
 export default function RootLayout({
